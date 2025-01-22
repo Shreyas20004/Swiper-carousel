@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules"
+import { EffectCoverflow, Pagination, Navigation, Keyboard} from "swiper/modules"
 import Card from "./Card"
 
 // Import Swiper styles
@@ -11,13 +11,15 @@ import "swiper/css/navigation"
 
 const Carousel = ({ items }) => {
   return (
-    <div className="relative w-full py-20 ">
+    <div className="relative w-full ">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={3}
+        slidesPerGroup={1}
         loop={true}
+        autoplay={{ delay:500 }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -30,7 +32,11 @@ const Carousel = ({ items }) => {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        keyboard={{
+          enabled: true, 
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation, Keyboard]}
+        
         breakpoints={{
           272: {
             slidesPerView: 1,
@@ -45,7 +51,7 @@ const Carousel = ({ items }) => {
 
           },
         }}
-        className="mySwiper w-[80%] "
+        className="mySwiper"
       >
         {items.map((item) => (
           <SwiperSlide key={item.id} className="swiper-slide">
@@ -53,8 +59,8 @@ const Carousel = ({ items }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-prev xs:!w-4 xs:!h-4 lg:!w-9 xs:text-sm  sm:!w-6 lg:!h-9  sm:!h-6 !bg-gray-500 !rounded-full !text-white after:!text-lg"></div>
-      <div className="swiper-button-next xs:!w-4 xs:!h-4 lg:!w-9 xs:text-sm  sm:!w-6 lg:!h-9  sm:!h-6 !bg-gray-500 !rounded-full !text-white after:!text-lg "></div>
+      <div className="swiper-button-prev xs:!w-4 xs:!h-4 lg:!w-9 xs:text-sm  sm:!w-6 lg:!h-9  sm:!h-6 !bg-gray-500 !rounded-full !text-white after:!text-lg overflow-hidden absolute"></div>
+      <div className="swiper-button-next xs:!w-4 xs:!h-4 lg:!w-9 xs:text-sm  sm:!w-6 lg:!h-9  sm:!h-6 !bg-gray-500 !rounded-full !text-white after:!text-lg overflow-hidden absolute"></div>
     </div>
   )
 }

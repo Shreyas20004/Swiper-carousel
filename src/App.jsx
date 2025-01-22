@@ -33,7 +33,7 @@ const carouselItems = [
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-24 text-white bg-[#040507]">
+    <div className="flex flex-col items-center justify-center min-h-screen p-[12vw] text-white bg-[#040507]">
       <h1 className="mb-8 text-4xl font-bold">React Carousel</h1>
       <Carousel items={carouselItems} />
     </div>

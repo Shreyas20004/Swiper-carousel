@@ -4,6 +4,7 @@
 
 .swiper-slide {
   transition: all 0.3s ease;
+  opacity: 0.4;
 }
 
 .swiper-slide-active {
@@ -15,7 +16,7 @@
 
 .swiper-slide-prev,
 .swiper-slide-next {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .swiper-pagination {
