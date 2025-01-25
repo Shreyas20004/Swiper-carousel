@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Pagination, Navigation, Keyboard} from "swiper/modules"
+import { EffectCoverflow, Pagination, Navigation, Autoplay,Keyboard } from "swiper/modules"
 import Card from "./Card"
 
 // Import Swiper styles
@@ -19,43 +19,49 @@ const Carousel = ({ items }) => {
         slidesPerView={3}
         slidesPerGroup={1}
         loop={true}
-        autoplay={{ delay:500 }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
           depth: 100,
           modifier: 2,
-          slideShadows: false,
+          slideShadows: true,
         }}
-        pagination={{ clickable: true}}
+        pagination={{ clickable: true }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        keyboard={{
-          enabled: true, 
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation, Keyboard]}
-        
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay, Keyboard]}
+        className="mySwiper overflow-hidden !py-10"
         breakpoints={{
-          272: {
-            slidesPerView: 1,
-
-          },
-          640: {
-            slidesPerView: 2,
-
-          },
-          1024: {
-            slidesPerView: 3,
-
-          },
-        }}
-        className="mySwiper"
+                    272: {
+                      slidesPerView: 1,
+          
+                    },
+                    640: {
+                      slidesPerView: 2,
+          
+                    },
+                    1024: {
+                      slidesPerView: 3,
+          
+                    },
+                  }}
       >
         {items.map((item) => (
           <SwiperSlide key={item.id} className="swiper-slide">
-            <Card title={item.title} description={item.description} img={item.img} />
+            <Card
+              title={item.title}
+              category={item.category}
+              description={item.description}
+              problemLink={item.problemLink}
+              submissionLink={item.submissionLink}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

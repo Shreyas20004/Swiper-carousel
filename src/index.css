@@ -2,21 +2,28 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.swiper-container {
+  overflow: visible !important;
+}
+
 .swiper-slide {
   transition: all 0.3s ease;
-  opacity: 0.4;
 }
 
 .swiper-slide-active {
-  transform: scale(1.1);
-  opacity: 1;
   z-index: 2;
 }
 
-
-.swiper-slide-prev,
-.swiper-slide-next {
-  opacity: 0.9;
+@media (min-width: 1024px) {
+  .swiper-slide-active .card-container {
+    transform: scale(1.05);
+    opacity: 1 !important;
+  }
+  .swiper-slide-prev .card-container,
+  .swiper-slide-next .card-container {
+    transform: scale(1);
+    opacity: 0.9 !important;
+  }
 }
 
 .swiper-pagination {
@@ -24,23 +31,32 @@
   margin-top: 20px;
 }
 
+.swiper-pagination-bullet {
+  background: #ff47c7 !important;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ffffff !important;
-  background-color: rgba(107, 114, 128, 0.8) !important;
-  width: 48px !important;
-  height: 48px !important;
+  color: #ff47c7 !important;
+  background-color: rgba(28, 31, 38, 0.8) !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50% !important;
   transition: background-color 0.3s ease;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: rgba(75, 85, 99, 0.8) !important;
+  background-color: rgba(28, 31, 38, 0.9) !important;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 20px !important;
+  font-size: 18px !important;
+}
+
+.card-container {
+  transition: all 0.3s ease;
+  opacity: 0.5;
 }
 
