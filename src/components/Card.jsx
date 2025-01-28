@@ -2,7 +2,7 @@
 import { CiLock } from "react-icons/ci";
 import Overlap from "./Overlap";
 
-const Card = ({ title, category, description, problemLink}) => {
+const Card = ({ title, category,problemLink}) => {
     let screen = window.screen.width
     const sizeAdjust = (screen) => {
         if (screen >= 640) {
@@ -14,7 +14,7 @@ const Card = ({ title, category, description, problemLink}) => {
         }
     }
     return (
-        <div className="card-container relative w-full h-full  rounded-3xl overflow-hidden bg-[#1c1f26f4] bg-blend-overlay bg-cover  transition-all duration-300 ease-in-out hidden ">
+        <div className="card-container relative w-full h-[450px]  rounded-3xl overflow-hidden bg-[#1c1f26f4] bg-blend-overlay bg-cover  transition-all duration-300 ease-in-out hidden ">
             <div className="flex flex-col w-full h-full gap-6 p-4 select-none ">
                 {/* Header */}
                 <div className="mb-4 text-center">
@@ -31,12 +31,7 @@ const Card = ({ title, category, description, problemLink}) => {
                     <span className="text-[#1d296e] font-semibold">Category:</span>
                     <span className="text-gray-200">{category}</span>
                 </div>
-
-                {/* Description */}
-                <div className="flex-grow">
-                    <p className="leading-relaxed text-gray-300">{description}</p>
-                </div>
-
+                
                 {/* Links */}
                 <div className="flex flex-col gap-3 mt-4">
                     <div className="flex items-center gap-2">

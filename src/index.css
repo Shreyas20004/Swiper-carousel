@@ -37,12 +37,12 @@
 }
 
 .swiper-pagination-bullet {
-  background: #ff47c7 !important;
+  background: #1d296e !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ff47c7 !important;
+  color: #1d296e !important;
   background-color: rgba(28, 31, 38, 0.8) !important;
   width: 40px !important;
   height: 40px !important;

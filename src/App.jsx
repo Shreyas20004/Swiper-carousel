@@ -5,16 +5,12 @@ const carouselItems = [
     id: 1,
     title: "AiHello Problem Statements",
     category: "Machine Learning",
-    description:
-      "Our sponsor - AiHello (https://www.aihello.com/) have released 2 problem statements. Anyone who performs well and submits their work to us will get a direct entry to Code Kshetra 2.0! They can use their project for the hackathon and also stand a chance to get hired by the company!!!",
     problemLink: "https://shorturl.at/VLAaq",
   },
   {
     id: 2,
     title: "Data Analysis Challenge",
     category: "Data Science",
-    description:
-      "Analyze complex datasets and provide meaningful insights using advanced statistical methods and visualization techniques. Create a comprehensive report detailing your findings and methodology.",
     problemLink: "https://shorturl.at/example1",
   
   },
@@ -22,8 +18,6 @@ const carouselItems = [
     id: 3,
     title: "Computer Vision Task",
     category: "Deep Learning",
-    description:
-      "Develop an efficient computer vision model for real-time object detection and classification. Focus on optimization and accuracy while maintaining reasonable computational requirements.",
     problemLink: "https://shorturl.at/example3",
   
   },
@@ -31,8 +25,6 @@ const carouselItems = [
     id: 4,
     title: "Computer Vision Task",
     category: "Deep Learning",
-    description:
-      "Develop an efficient computer vision model for real-time object detection and classification. Focus on optimization and accuracy while maintaining reasonable computational requirements.",
     problemLink: "https://shorturl.at/example3",
   
   },
@@ -45,7 +37,6 @@ function App() {
       <div className="w-full">
         <Carousel items={carouselItems} />
       </div>
-
     </div>
   )
 }
