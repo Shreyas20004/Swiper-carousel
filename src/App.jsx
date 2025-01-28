@@ -42,8 +42,11 @@ const carouselItems = [
 function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 bg-[#121417]">
-      <h1 className="mb-8 text-3xl font-bold text-center text-white sm:text-4xl">Problem Statements</h1>
-      <Carousel items={carouselItems} />
+      <h1 className="text-3xl font-bold text-center text-white sm:text-4xl">Problem Statements</h1>
+      <div className="h-[600px] w-full mt-8">
+        <Carousel items={carouselItems} />
+      </div>
+
     </div>
   )
 }

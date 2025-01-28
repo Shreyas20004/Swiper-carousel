@@ -14,12 +14,12 @@ const Card = ({ title, category, description, problemLink, submissionLink }) => 
         }
     }
     return (
-        <div className="card-container relative w-full min-h-[50vh] rounded-3xl overflow-hidden bg-[#1c1f26] p-8 shadow-lg transition-all duration-300 ease-in-out  ">
-            <div className="flex flex-col h-full gap-6 ">
+        <div className="card-container relative w-full h-full  rounded-3xl overflow-hidden bg-[#1c1f26]  shadow-lg transition-all duration-300 ease-in-out hidden ">
+            <div className="flex flex-col w-full h-full gap-6 p-4 select-none ">
                 {/* Header */}
                 <div className="mb-4 text-center">
-                    <Overlap/>
-                    <h3 className="text-xl text-gray-200">{title}</h3>
+                    <Overlap />
+                    <h3 className="text-gray-200 ">{title}</h3>
                 </div>
 
                 {/* Category */}
@@ -57,17 +57,18 @@ const Card = ({ title, category, description, problemLink, submissionLink }) => 
                             {submissionLink}
                         </a>
                     </div>
-                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm" id="card">
-                        <CiLock
-                            color="white"
-                            size={
-                                sizeAdjust(screen)
-                            }
-                            className="bg-[#212429] rounded-full p-1 border-2 border-white mb-2" />
-                        <h2 className="mb-2 font-bold text-white lg:text-2xl md:text-xl xs:text-sm">Locked Content</h2>
-                        <h2 className="text-white lg:text-2xl md:text-xl xs:text-xsw">Will be available soon!!!😄</h2>
-                    </div>
                 </div>
+            </div>
+            {/* Lock Icon */}
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm" id="card">
+                <CiLock
+                    color="white"
+                    size={
+                        sizeAdjust(screen)
+                    }
+                    className="bg-[#212429] rounded-full p-1 border-2 border-white mb-2" />
+                <h2 className="mb-2 font-bold text-white lg:text-2xl md:text-xl xs:text-sm">Locked Content</h2>
+                <h2 className="text-white lg:text-2xl md:text-xl xs:text-xsw">Will be available soon!!!😄</h2>
             </div>
         </div>
     )
