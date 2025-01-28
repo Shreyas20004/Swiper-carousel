@@ -58,6 +58,7 @@ const Carousel = ({ items }) => {
             <Card
               title={item.title}
               category={item.category}
+              description={item.description}
               problemLink={item.problemLink}
             />
           </SwiperSlide>

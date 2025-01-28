@@ -3,31 +3,34 @@ import Carousel from "./components/Carousel"
 const carouselItems = [
   {
     id: 1,
-    title: "AiHello Problem Statements",
-    category: "Machine Learning",
-    problemLink: "https://shorturl.at/VLAaq",
+    title: "Lorem ipsum dolor",
+    category: "Lorem ipsum dolor sit amet",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium ultricies dolor, eu consectetur augue consectetur quis. Cras ac pharetra.",
+    problemLink: "https://www.google.com",
   },
   {
     id: 2,
-    title: "Data Analysis Challenge",
-    category: "Data Science",
-    problemLink: "https://shorturl.at/example1",
-  
+    title: "Lorem ipsum dolor",
+    category: "Lorem ipsum dolor sit amet",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium ultricies dolor, eu consectetur augue consectetur quis. Cras ac pharetra.",
+    problemLink: "https://www.google.com",
   },
   {
     id: 3,
-    title: "Computer Vision Task",
-    category: "Deep Learning",
-    problemLink: "https://shorturl.at/example3",
-  
+    title: "Lorem ipsum dolor",
+    category: "Lorem ipsum dolor sit amet",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium ultricies dolor, eu consectetur augue consectetur quis. Cras ac pharetra.",
+    problemLink: "https://www.google.com",
   },
   {
     id: 4,
-    title: "Computer Vision Task",
-    category: "Deep Learning",
-    problemLink: "https://shorturl.at/example3",
-  
+    title: "Lorem ipsum dolor",
+    category: "Lorem ipsum dolor sit amet",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium ultricies dolor, eu consectetur augue consectetur quis. Cras ac pharetra.",
+    problemLink: "https://www.google.com",
   },
+
+
 ]
 
 function App() {
