@@ -54,7 +54,7 @@ const Card = ({ title, category,description,problemLink}) => {
                 </div>
             </div>
             {/* Lock Icon */}
-            {/* <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm" id="card">
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm" id="card">
                 <CiLock
                     color="white"
                     size={
@@ -63,7 +63,7 @@ const Card = ({ title, category,description,problemLink}) => {
                     className="bg-[#212429] rounded-full p-1 border-2 border-white mb-2" />
                 <h2 className="mb-2 font-bold text-white lg:text-2xl md:text-xl xs:text-sm">Locked Content</h2>
                 <h2 className="text-white lg:text-2xl md:text-xl xs:text-xsw">Will be available soon!!!😄</h2>
-            </div> */}
+            </div>
         </div>
     )
 }
