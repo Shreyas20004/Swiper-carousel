@@ -60,7 +60,6 @@ const Carousel = ({ items }) => {
               category={item.category}
               description={item.description}
               problemLink={item.problemLink}
-              submissionLink={item.submissionLink}
             />
           </SwiperSlide>
         ))}

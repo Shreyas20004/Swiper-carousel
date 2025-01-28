@@ -2,7 +2,7 @@
 import { CiLock } from "react-icons/ci";
 import Overlap from "./Overlap";
 
-const Card = ({ title, category, description, problemLink, submissionLink }) => {
+const Card = ({ title, category, description, problemLink}) => {
     let screen = window.screen.width
     const sizeAdjust = (screen) => {
         if (screen >= 640) {
@@ -14,17 +14,21 @@ const Card = ({ title, category, description, problemLink, submissionLink }) => 
         }
     }
     return (
-        <div className="card-container relative w-full h-full  rounded-3xl overflow-hidden bg-[#1c1f26]  shadow-lg transition-all duration-300 ease-in-out hidden ">
+        <div className="card-container relative w-full h-full  rounded-3xl overflow-hidden bg-[#1c1f26f4] bg-blend-overlay bg-cover  transition-all duration-300 ease-in-out hidden ">
             <div className="flex flex-col w-full h-full gap-6 p-4 select-none ">
                 {/* Header */}
                 <div className="mb-4 text-center">
                     <Overlap />
-                    <h3 className="text-gray-200 ">{title}</h3>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                    <span className="text-[#1d296e] font-semibold">Title:</span>
+                    <span className="text-gray-200">{title}</span>
                 </div>
 
                 {/* Category */}
                 <div className="flex items-center gap-2">
-                    <span className="text-[#ff47c7] font-semibold">Category:</span>
+                    <span className="text-[#1d296e] font-semibold">Category:</span>
                     <span className="text-gray-200">{category}</span>
                 </div>
 
@@ -39,22 +43,11 @@ const Card = ({ title, category, description, problemLink, submissionLink }) => 
                         <span className="text-gray-300">Problem Statement:</span>
                         <a
                             href={problemLink}
-                            className="text-[#ff47c7] hover:text-[#ff71d4] transition-colors"
+                            className="text-[#1d296e] hover:text-[#1d296e] transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             {problemLink}
-                        </a>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <span className="text-gray-300">Submission:</span>
-                        <a
-                            href={submissionLink}
-                            className="text-[#ff47c7] hover:text-[#ff71d4] transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {submissionLink}
                         </a>
                     </div>
                 </div>
