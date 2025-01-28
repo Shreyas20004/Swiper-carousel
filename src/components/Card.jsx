@@ -15,7 +15,7 @@ const Card = ({ title, category,description,problemLink}) => {
     }
     return (
         <div className="card-container relative w-full h-[450px]  rounded-3xl overflow-hidden bg-[#1c1f26f4] bg-blend-overlay bg-cover  transition-all duration-300 ease-in-out hidden ">
-            <div className="flex flex-col w-full h-full gap-6 p-4 select-none ">
+            <div className="flex flex-col w-full h-full gap-2 p-6 text-xl select-none md:text-xl xs:text-sm">
                 {/* Header */}
                 <div className="mb-4 text-center">
                     <Overlap />
@@ -33,15 +33,16 @@ const Card = ({ title, category,description,problemLink}) => {
                 </div>
                 
                  {/* description */}
-                 <div className="flex gap-2">
+                 <div className="block gap-0 ">
                     <span className="text-[#1d296e] font-semibold">Description:</span><br />
                     <span className="text-gray-200">{description}</span>
                 </div>
                 
                 {/* Links */}
-                <div className="flex flex-col gap-3 mt-4">
+                <div className="flex flex-col gap-0 mt-4">
                     <div className="flex items-center gap-2">
                         <span className="text-gray-300">Problem Statement:</span>
+                        </div>
                         <a
                             href={problemLink}
                             className="text-[#1d296e] hover:text-[#1d296e] transition-colors"
@@ -50,11 +51,11 @@ const Card = ({ title, category,description,problemLink}) => {
                         >
                             {problemLink}
                         </a>
-                    </div>
+                    
                 </div>
             </div>
             {/* Lock Icon */}
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm" id="card">
+            {/* <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 backdrop-blur-sm" id="card">
                 <CiLock
                     color="white"
                     size={
@@ -63,7 +64,7 @@ const Card = ({ title, category,description,problemLink}) => {
                     className="bg-[#212429] rounded-full p-1 border-2 border-white mb-2" />
                 <h2 className="mb-2 font-bold text-white lg:text-2xl md:text-xl xs:text-sm">Locked Content</h2>
                 <h2 className="text-white lg:text-2xl md:text-xl xs:text-xsw">Will be available soon!!!😄</h2>
-            </div>
+            </div> */}
         </div>
     )
 }
