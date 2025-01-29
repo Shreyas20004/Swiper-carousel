@@ -22,19 +22,19 @@ const Card = ({ title, category,description,problemLink}) => {
                 </div>
                 
                 <div className="flex items-center gap-2">
-                    <span className="text-[#1d296e] font-semibold">Title:</span>
+                    <span className="text-[#485385] font-semibold">Title:</span>
                     <span className="text-gray-200">{title}</span>
                 </div>
 
                 {/* Category */}
                 <div className="flex items-center gap-2">
-                    <span className="text-[#1d296e] font-semibold">Category:</span>
+                    <span className="text-[#485385] font-semibold">Category:</span>
                     <span className="text-gray-200">{category}</span>
                 </div>
                 
                  {/* description */}
                  <div className="block gap-0 ">
-                    <span className="text-[#1d296e] font-semibold">Description:</span><br />
+                    <span className="text-[#485385] font-semibold">Description:</span><br />
                     <span className="text-gray-200">{description}</span>
                 </div>
                 
@@ -45,7 +45,7 @@ const Card = ({ title, category,description,problemLink}) => {
                         </div>
                         <a
                             href={problemLink}
-                            className="text-[#1d296e] hover:text-[#1d296e] transition-colors"
+                            className="text-[#485385] hover:text-[#1A2867] transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
